@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #606060FF;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+.heading{
+  margin: 20px 0;
+  animation: bounce-in 5s ease 0s 1 normal;
+  position: relative;
+  font-size: 20px;
+  color: gold;
+}
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+  background: rgba(0, 0, 50, 0.3);
+  border-radius: 10px;
+}
+p{
+  margin: 0 10px;
+}
+#formy{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-bottom: 20px;
+  height: 250px;
+}
+.view{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  margin: 20px 0;
+}
+.view .in{
+  width: 55%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+.view .display{
+  width: 40%;
+  height: 60px;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+#btn{
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 900;
+  outline: none;
+  width: 60%;
+  background: black;
+  color: #fff;
+}
+.anima{
+  height: 20px;
+  animation: colourful 5s linear 0s infinite alternate;
+  width: 100%;
+  position: relative;
+  border-radius: 9px;
+  font-weight: 900;
+}
+#btn:hover{
+  background: #181616;
+  cursor: pointer;
+}
+.in:valid{
+  border: 2px solid green;
+}
+.in:invalid{
+  border: 2px solid red;
+}
+@keyframes colourful{
+   0%  {background-color:red; left: 0px; top:0px;} 
+  20%  {background-color:orange; left:0px; top:0px;}
+  40%  {background-color:purple; left:0px; top:0px;}
+  60%  {background-color:blue; left:0px; top:0px;}
+  80%  {background-color:green; left:0px; top:0px;}
+  100% {background-color:olive; left:0px; top:0px;}
+}
+
+@keyframes bounce-in{
+  0%  {color:red; left: -50px; top:-100px;} 
+  25%  {color:#fff; left:-40px; top:0px;}
+  50%  {color: #FFf; left:-30px; top: -80px;}
+  75%  {color:green; left:-20px; top: 0px;}
+  100% {color:#gold; left:0px; top:0px;}
+}
