@@ -67,7 +67,7 @@ function startApp() {
       else if (_9mobile.includes(prefix)) {
         const img = document.createElement("img")
         img.src = "9mobile.png"
-        img.height = 45;
+        img.height = 50;
         img.width = 40;
         img.style.alignSelf = "center"
         spanElement.replaceChildren(img);

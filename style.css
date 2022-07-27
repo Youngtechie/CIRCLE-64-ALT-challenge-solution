@@ -8,7 +8,7 @@ body {
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background-color: #606060FF;
+  background-color: #34495e;
   height: 100vh;
   overflow: hidden;
   font-size: 15px;
@@ -28,8 +28,9 @@ body {
   align-items: center;
   justify-content: center;
   width: 310px;
-  background: rgba(0, 0, 50, 0.3);
+  background: #191919;
   border-radius: 10px;
+  padding: 10px;
 }
 p{
   margin: 0 10px;
@@ -41,7 +42,7 @@ p{
   justify-content: center;
   width: 90%;
   margin-bottom: 20px;
-  height: 250px;
+  height: 200px;
 }
 .view{
   display: flex;
@@ -54,16 +55,18 @@ p{
 .view .in{
   width: 55%;
   border-radius: 10px;
-  padding: 20px;
+  padding: 14px 10px;
   text-align: center;
   outline: none;
   border: none;
+  background: none;
+  color: #FAFC3F;
 }
 .view .display{
   width: 40%;
   height: 60px;
-  background: #fff;
-  color: black;
+  background: none;
+  color: whitesmoke;
   border-radius: 10px;
   display: flex;
   flex-flow: column wrap;
@@ -81,8 +84,7 @@ p{
 }
 .anima{
   height: 20px;
-  animation: colourful 5s linear 0s infinite alternate;
-  width: 100%;
+  width: 80%;
   position: relative;
   border-radius: 9px;
   font-weight: 900;
@@ -92,24 +94,63 @@ p{
   cursor: pointer;
 }
 .in:valid{
-  border: 2px solid green;
+  border: 2px solid #3498db;
 }
 .in:invalid{
   border: 2px solid red;
 }
-@keyframes colourful{
-   0%  {background-color:red; left: 0px; top:0px;} 
-  20%  {background-color:orange; left:0px; top:0px;}
-  40%  {background-color:purple; left:0px; top:0px;}
-  60%  {background-color:blue; left:0px; top:0px;}
-  80%  {background-color:green; left:0px; top:0px;}
-  100% {background-color:olive; left:0px; top:0px;}
+.colorful{
+  animation: colourful 5s ease 0s infinite normal;
+  margin-top: 10px;
 }
-
+marquee{
+  margin: 5px 0;
+}
+/* @keyframes colourful{
+   0%  {color:red; left: 0px; top:0px;} 
+  20%  {color:orange; left:0px; top:0px;}
+  40%  {color:purple; left:0px; top:0px;}
+  60%  {color:blue; left:0px; top:0px;}
+  80%  {color:green; left:0px; top:0px;}
+  100% {color:olive; left:0px; top:0px;}
+} */
 @keyframes bounce-in{
   0%  {color:red; left: -50px; top:-100px;} 
   25%  {color:#fff; left:-40px; top:0px;}
   50%  {color: #FFf; left:-30px; top: -80px;}
   75%  {color:green; left:-20px; top: 0px;}
-  100% {color:#gold; left:0px; top:0px;}
+  100% {color:gold; left:0px; top:0px;}
+}
+@media screen and (min-width: 950px){
+.container{
+  width: 450px;
+}
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  /* Control the left side
+  For the text part. */
+  .left {
+    left: 0;
+    background: yellowgreen;
+  }
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: #34495e;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
