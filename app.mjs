@@ -14,6 +14,18 @@ function startApp() {
 
   let form = document.querySelector("#formy");
 
+  let btnExit = document.querySelector(".btn_exit");
+
+  let split_right = document.querySelector(".right");
+
+  let split_left = document.querySelector(".left");
+
+  let first_enter = document.querySelector(".first_enter");
+
+  let second_enter = document.querySelector(".second_enter");
+
+  let maquee_ranger = document.querySelector(".marquee_ranger");
+
 
   function validateNumber() {
     let inputValue = inputElement.value;
@@ -83,7 +95,22 @@ function startApp() {
     }
   }
 
-
+  btnExit.addEventListener("click", () => {
+    // if (window.matchMedia("(max-width: 700px)").matches) {
+    //   split_right.style.display = "none";
+    //   split_left.style.display = "block";
+    //   first_enter.innerHTML = "Thanks for checking"
+    //   second_enter.innerHTML = "Goodbye!";
+    //   maquee_ranger.style.top = "-40px";
+    // }
+    if (window.matchMedia("(min-width: 950px)").matches) {
+      split_right.style.display = "none";
+      split_left.style.width = "100%";
+      first_enter.innerHTML = "Thanks for checking"
+      second_enter.innerHTML = "Goodbye!";
+      maquee_ranger.style.top = "0px";
+    }
+  })
   btnElement.addEventListener("click", () => {
     spanElement.innerHTML = "";
   })

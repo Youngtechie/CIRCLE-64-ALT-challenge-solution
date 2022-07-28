@@ -31,6 +31,7 @@ body {
   background: #191919;
   border-radius: 10px;
   padding: 10px;
+  height: 450px;
 }
 p{
   margin: 0 10px;
@@ -41,8 +42,8 @@ p{
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-bottom: 20px;
-  height: 200px;
+  margin-bottom: 10px;
+  height: 180px;
 }
 .view{
   display: flex;
@@ -106,20 +107,26 @@ p{
 marquee{
   margin: 5px 0;
 }
-/* @keyframes colourful{
-   0%  {color:red; left: 0px; top:0px;} 
-  20%  {color:orange; left:0px; top:0px;}
-  40%  {color:purple; left:0px; top:0px;}
-  60%  {color:blue; left:0px; top:0px;}
-  80%  {color:green; left:0px; top:0px;}
-  100% {color:olive; left:0px; top:0px;}
-} */
 @keyframes bounce-in{
   0%  {color:red; left: -50px; top:-100px;} 
   25%  {color:#fff; left:-40px; top:0px;}
   50%  {color: #FFf; left:-30px; top: -80px;}
   75%  {color:green; left:-20px; top: 0px;}
   100% {color:gold; left:0px; top:0px;}
+}
+.btn_exit{
+		position: relative;
+		margin: 10px 0;
+		width: 30%;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+}
+@media screen and (min-width: 320px) and (max-width: 949px){
+  .left{
+    display: none;
+  }
 }
 @media screen and (min-width: 950px){
 .container{
@@ -137,14 +144,14 @@ marquee{
   }
   /* Control the left side
   For the text part. */
-  .left {
+ .left {
     left: 0;
-    background: yellowgreen;
+    background: #34495e;
   }
   /* Control the right side */
   .right {
     right: 0;
-    background-color: #34495e;
+    background-color: grey;
   }
   .centered {
     position: absolute;
@@ -153,4 +160,236 @@ marquee{
     transform: translate(-50%, -50%);
     text-align: center;
   }
+ .btn_next{
+		display: none;
+	}
 }
+.container2{
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		width: 300px;
+	}
+	.ranger{
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background: linear-gradient(270deg, rgba(19,59,218,1) 50%, rgba(124,123,130,1) 50%);
+		border-radius: 50%;
+		width: 250px;
+		height: 300px;
+	}
+	.cover{
+		height: 70px;
+		width: 240px;
+		background: #fff;
+		position: absolute;
+		z-index: 4;
+		top: 80px;
+		border-radius: 120px 120px 150px 150px;
+	}
+	.triangle-down {
+		z-index: 5;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 100px solid rgb(154,155,159);
+		top: 12px;
+	}
+	.triangle-up {
+		z-index: 5;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		border-bottom: 20px solid rgb(154,155,159);
+		top: 95px;
+	}
+	.triangle-down2 {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 100px solid transparent;
+		border-right: 100px solid transparent;
+		border-top: 90px solid #fff;
+		top: 90px;
+	}
+	.triangle-left {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 45px solid transparent;
+		border-right: 90px solid rgb(154,155,159);
+		border-bottom: 45px solid transparent;
+		top: 180px;
+	}
+	.triangle-right {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 45px solid transparent;
+		border-left: 90px solid rgb(154,155,159);
+		border-bottom: 45px solid transparent;
+		top: 180px;
+	}
+	.mouth{
+		z-index: 5;
+		position: absolute;
+		width: 70px;
+		height: 2px;
+		top: 225px;
+		background: #fff;
+		border-radius: 70%;
+		animation: talking 6s ease 0s 2 normal;
+	}
+	.saying{
+		position: relative;
+		left: 80px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+	.word_con{
+		position: relative;
+		width: 200px;
+		height: 100px;
+		background: blue;
+		text-align: center;
+		font-weight: 900;
+		color: #fff;
+		border-radius: 30%;
+		padding: 10px;
+		margin-left: -70px;
+		display: flex;
+		flex-flow: row wrap;
+		align-self: center;
+		justify-content: center;
+	}
+	.circle_1, .circle_2{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		background: #fff;
+	}
+	.circle_1{
+		top: 10px;
+		left: 50px;
+	}
+	.circle_2{
+		top: 30px;
+		left: 45px;
+	}
+	.first_enter{
+		position: relative;
+		animation: enter 6s ease 0s 1 normal;
+	}
+	.second_enter{
+		position: relative;
+		animation: enter 6s ease 6s 1 forwards;
+		top: -500px;
+	}
+	.marquee_ranger{
+		z-index: 6;
+		position: relative;
+		width: 70%;
+		top: -20px;
+	}
+	.btn_next{
+		z-index: 6;
+		position: relative;
+		width: 30%;
+		left: 140px;
+		top: 100px;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+	}
+	.btn_exit{
+		position: relative;
+		margin-top: 10px;
+		width: 30%;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+	}
+	button{
+		outline: none;
+    color: #fff;
+	}
+	button:hover{
+		cursor: pointer;
+	}
+	@keyframes talking{
+		0% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		20% {
+					width: 70px;
+					height: 2px;
+					top: 225px;
+					background: #fff;
+					border-radius: 70%;
+		}
+		40% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		60% {
+					width: 70px;
+					height: 2px;
+					top: 225px;
+					background: #fff;
+					border-radius: 70%;
+		}
+		80% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		100% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+	}
+	@keyframes enter{
+		0%{
+				top: -200px;
+				display: inline;
+		}
+		70%{
+				top: 20px;
+				display: inline;
+		}
+		100%{
+			top: 0;
+			display: inline;
+		}
+	}
+	.marquee_ranger{
+		top: 0px;
+    color: black;
+	}
