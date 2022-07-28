@@ -124,9 +124,15 @@ marquee{
 		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
 }
 @media screen and (min-width: 320px) and (max-width: 949px){
-  .left{
+  .right{
     display: none;
   }
+  .marquee_ranger{
+		top: 0px;
+	}
+  .container2{
+		margin-left: -50px;
+	}
 }
 @media screen and (min-width: 950px){
 .container{
@@ -162,6 +168,9 @@ marquee{
   }
  .btn_next{
 		display: none;
+	}
+  .marquee_ranger{
+		top: -20px;
 	}
 }
 .container2{
@@ -302,7 +311,7 @@ marquee{
 		z-index: 6;
 		position: relative;
 		width: 70%;
-		top: -20px;
+    color: black;
 	}
 	.btn_next{
 		z-index: 6;
@@ -388,8 +397,4 @@ marquee{
 			top: 0;
 			display: inline;
 		}
-	}
-	.marquee_ranger{
-		top: 0px;
-    color: black;
 	}

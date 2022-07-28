@@ -14,6 +14,8 @@ function startApp() {
 
   let form = document.querySelector("#formy");
 
+  let btnNext = document.querySelector(".btn_next");
+
   let btnExit = document.querySelector(".btn_exit");
 
   let split_right = document.querySelector(".right");
@@ -96,19 +98,31 @@ function startApp() {
   }
 
   btnExit.addEventListener("click", () => {
-    // if (window.matchMedia("(max-width: 700px)").matches) {
-    //   split_right.style.display = "none";
-    //   split_left.style.display = "block";
-    //   first_enter.innerHTML = "Thanks for checking"
-    //   second_enter.innerHTML = "Goodbye!";
-    //   maquee_ranger.style.top = "-40px";
-    // }
-    if (window.matchMedia("(min-width: 950px)").matches) {
+    if (window.matchMedia("(max-width: 700px)").matches) {
+      split_right.style.display = "none";
+      split_left.style.display = "block";
+      first_enter.innerHTML = "Thanks for checking"
+      second_enter.innerHTML = "Goodbye!";
+      btnNext.style.display = "none";
+      maquee_ranger.style.top = "-20px";
+    }
+    else if (window.matchMedia("(min-width: 950px)").matches) {
       split_right.style.display = "none";
       split_left.style.width = "100%";
       first_enter.innerHTML = "Thanks for checking"
       second_enter.innerHTML = "Goodbye!";
-      maquee_ranger.style.top = "0px";
+      maquee_ranger.style.top = "-20px";
+    }
+  })
+
+  btnNext.addEventListener("click", () => {
+    if (window.matchMedia("(max-width: 700px)").matches) {
+      split_right.style.display = "block";
+      split_left.style.display = "none";
+    }
+    else if (window.matchMedia("(min-width: 950px)").matches) {
+      split_right.style.display = "block";
+      split_left.style.display = "none";
     }
   })
   btnElement.addEventListener("click", () => {
