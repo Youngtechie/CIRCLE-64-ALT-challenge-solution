@@ -133,6 +133,9 @@ marquee{
   .container2{
 		margin-left: -50px;
 	}
+  .colorful{
+    margin-top: -5px;
+  }
 }
 @media screen and (min-width: 950px){
 .container{
@@ -305,7 +308,7 @@ marquee{
 	.second_enter{
 		position: relative;
 		animation: enter 6s ease 6s 1 forwards;
-		top: -500px;
+		top: -1000px;
 	}
 	.marquee_ranger{
 		z-index: 6;
@@ -326,7 +329,7 @@ marquee{
 	}
 	.btn_exit{
 		position: relative;
-		margin-top: 10px;
+		margin-top: 5px;
 		width: 30%;
 		padding: 10px;
 		font-weight: 1000;
@@ -386,7 +389,7 @@ marquee{
 	}
 	@keyframes enter{
 		0%{
-				top: -200px;
+				top: -10000px;
 				display: inline;
 		}
 		70%{
