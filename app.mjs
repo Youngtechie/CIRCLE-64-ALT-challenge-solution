@@ -93,7 +93,7 @@ function startApp() {
       let sortedNetworks = allNetwork.sort();
     }
     else {
-      spanElement.innerHTML = "Input numbers only";
+      spanElement.innerHTML = "Only numbers and + are allowed";
     }
   }
 
@@ -101,7 +101,7 @@ function startApp() {
     if (window.matchMedia("(max-width: 700px)").matches) {
       split_right.style.display = "none";
       split_left.style.display = "block";
-      first_enter.innerHTML = "Thanks for checking"
+      first_enter.innerHTML = "That's great right? Thanks for checking."
       second_enter.innerHTML = "Goodbye!";
       btnNext.style.display = "none";
       maquee_ranger.style.top = "-20px";
@@ -109,12 +109,11 @@ function startApp() {
     else if (window.matchMedia("(min-width: 950px)").matches) {
       split_right.style.display = "none";
       split_left.style.width = "100%";
-      first_enter.innerHTML = "Thanks for checking"
+      first_enter.innerHTML = "That's great right? Thanks for checking."
       second_enter.innerHTML = "Goodbye!";
       maquee_ranger.style.top = "-20px";
     }
   })
-
   btnNext.addEventListener("click", () => {
     if (window.matchMedia("(max-width: 700px)").matches) {
       split_right.style.display = "block";
@@ -128,7 +127,6 @@ function startApp() {
   btnElement.addEventListener("click", () => {
     spanElement.innerHTML = "";
   })
-
 };
 
 // ======= DO NOT EDIT ============== //
