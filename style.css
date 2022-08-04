@@ -155,7 +155,7 @@ marquee{
   For the text part. */
  .left {
     left: 0;
-    background: #34495e;
+    background: #000;
   }
   /* Control the right side */
   .right {
@@ -334,7 +334,7 @@ marquee{
 		padding: 10px;
 		font-weight: 1000;
 		border-radius: 10px;
-		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(9, 13, 28) 50%);
 	}
 	button{
 		outline: none;
@@ -400,4 +400,4 @@ marquee{
 			top: 0;
 			display: inline;
 		}
-	}
+    }

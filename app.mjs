@@ -124,6 +124,7 @@ function startApp() {
       split_left.style.display = "none";
     }
   })
+  
   btnElement.addEventListener("click", () => {
     spanElement.innerHTML = "";
   })
