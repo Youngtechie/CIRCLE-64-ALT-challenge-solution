@@ -28,6 +28,10 @@ function startApp() {
 
   let maquee_ranger = document.querySelector(".marquee_ranger");
 
+  let ringShow = document.querySelector(".ringShow");
+
+  let internalStyle = document.head.appendChild(document.createElement("style"));
+
 
   function validateNumber() {
     let inputValue = inputElement.value;
@@ -61,6 +65,8 @@ function startApp() {
         img.width = 40;
         img.style.alignSelf = "center"
         spanElement.replaceChildren(img);
+        ringShow.style.border = "4px solid yellow";
+        internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px yellow;}";
       }
       else if (airtel.includes(prefix)) {
         const img = document.createElement("img")
@@ -69,6 +75,8 @@ function startApp() {
         img.width = 40;
         img.style.alignSelf = "center"
         spanElement.replaceChildren(img);
+        ringShow.style.border = "4px solid red";
+        internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px red;}";
       }
       else if (GLO.includes(prefix)) {
         const img = document.createElement("img")
@@ -77,6 +85,8 @@ function startApp() {
         img.width = 40;
         img.style.alignSelf = "center"
         spanElement.replaceChildren(img);
+        ringShow.style.border = "4px solid green";
+        internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px green;}";
       }
       else if (_9mobile.includes(prefix)) {
         const img = document.createElement("img")
@@ -85,9 +95,13 @@ function startApp() {
         img.width = 40;
         img.style.alignSelf = "center"
         spanElement.replaceChildren(img);
+        ringShow.style.border = "4px solid #2d4a1a";
+        internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px #2d4a1a;}";
       }
       else {
         spanElement.innerHTML = "Unknown number";
+        ringShow.style.border = "4px solid white";
+        internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px blue;}";
       }
       let allNetwork = MTN.concat(airtel, GLO, _9mobile);
       let sortedNetworks = allNetwork.sort();
@@ -122,6 +136,7 @@ function startApp() {
     if (window.matchMedia("(max-width: 949px)").matches) {
       split_right.style.display = "block";
       split_left.style.display = "none";
+          
     }
     else if (window.matchMedia("(min-width: 950px)").matches) {
       split_right.style.display = "block";

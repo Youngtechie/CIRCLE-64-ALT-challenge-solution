@@ -32,6 +32,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   height: 450px;
+  position: relative;
 }
 p{
   margin: 0 10px;
@@ -43,7 +44,7 @@ p{
   justify-content: center;
   width: 90%;
   margin-bottom: 10px;
-  height: 180px;
+  height: 250px;
 }
 .view{
   display: flex;
@@ -51,7 +52,7 @@ p{
   justify-content: space-between;
   width: 100%;
   font-size: 12px;
-  margin: 20px 0;
+  margin: 50px 0;
 }
 .view .in{
   width: 55%;
@@ -82,13 +83,6 @@ p{
   width: 60%;
   background: black;
   color: #fff;
-}
-.anima{
-  height: 20px;
-  width: 80%;
-  position: relative;
-  border-radius: 9px;
-  font-weight: 900;
 }
 #btn:hover{
   background: #181616;
@@ -123,6 +117,31 @@ marquee{
 		border-radius: 10px;
 		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
 }
+
+.ringShow{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: animate 4s linear infinite normal;
+  top: 140px;
+  left: 175px;
+  border: 4px solid white;
+}
+.ringShow::before{
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #fff;
+}
+.ringShow::before {
+  box-shadow: 0 0 0 5px #3344c1,
+  0 0 0 10px #3344c1;
+}  
 @media screen and (min-width: 320px) and (max-width: 949px){
   .right{
     display: none;
@@ -175,6 +194,22 @@ marquee{
   .marquee_ranger{
 		top: -20px;
 	}
+.ringShow{
+  width: 150px;
+  height: 150px;
+  top: 110px;
+  left: 267px;
+  }
+  .ringShow::before{
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  }
+.ringShow::before {
+  box-shadow: 0 0 0 5px #3344c1,
+  0 0 0 10px #3344c1;
+}  
 }
 .container2{
 		display: flex;
