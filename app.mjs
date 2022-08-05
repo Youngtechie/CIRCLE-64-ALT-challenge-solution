@@ -96,26 +96,30 @@ function startApp() {
       spanElement.innerHTML = "Only numbers and + are allowed";
     }
   }
+  let container3 = document.querySelector(".container3");
+  let container2 = document.querySelector(".container2");
 
   btnExit.addEventListener("click", () => {
-    if (window.matchMedia("(max-width: 700px)").matches) {
-      split_right.style.display = "none";
-      split_left.style.display = "block";
-      first_enter.innerHTML = "That's great right? Thanks for checking."
-      second_enter.innerHTML = "Goodbye!";
+    container3.style.display = "none";
+    container2.style.display = "flex";
+    container2.style.top = "0px";
+    first_enter.innerHTML = "That's great right? Thanks for checking."
+    second_enter.innerHTML = "Goodbye!";
+    maquee_ranger.style.top = "-20px";
+    container2.style.animation = "none";
+    container2.style.position = "relative";
+    split_right.style.display = "none";
+
+    if (window.matchMedia("(max-width: 949px)").matches) {
+      split_left.style.display = "flex";
       btnNext.style.display = "none";
-      maquee_ranger.style.top = "-20px";
     }
     else if (window.matchMedia("(min-width: 950px)").matches) {
-      split_right.style.display = "none";
       split_left.style.width = "100%";
-      first_enter.innerHTML = "That's great right? Thanks for checking."
-      second_enter.innerHTML = "Goodbye!";
-      maquee_ranger.style.top = "-20px";
     }
   })
   btnNext.addEventListener("click", () => {
-    if (window.matchMedia("(max-width: 700px)").matches) {
+    if (window.matchMedia("(max-width: 949px)").matches) {
       split_right.style.display = "block";
       split_left.style.display = "none";
     }
@@ -124,7 +128,7 @@ function startApp() {
       split_left.style.display = "none";
     }
   })
-  
+
   btnElement.addEventListener("click", () => {
     spanElement.innerHTML = "";
   })

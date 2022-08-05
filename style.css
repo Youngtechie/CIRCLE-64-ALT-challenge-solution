@@ -128,10 +128,10 @@ marquee{
     display: none;
   }
   .marquee_ranger{
-		top: 0px;
+		top: -20px;
 	}
   .container2{
-		margin-left: -50px;
+		margin-left: 0px;
 	}
   .colorful{
     margin-top: -5px;
@@ -182,6 +182,8 @@ marquee{
 		align-items: center;
 		justify-content: center;
 		width: 300px;
+    animation: GetOut 5s ease 12s forwards;
+    position: absolute;
 	}
 	.ranger{
 		display: flex;
@@ -318,10 +320,10 @@ marquee{
 	}
 	.btn_next{
 		z-index: 6;
-		position: relative;
+		position: absolute;
 		width: 30%;
-		left: 140px;
-		top: 100px;
+		left: 205px;
+		top: 380px;
 		padding: 10px;
 		font-weight: 1000;
 		border-radius: 10px;
@@ -399,5 +401,140 @@ marquee{
 		100%{
 			top: 0;
 			display: inline;
-		}
+		} 
+  }
+.container3, .netcont{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto;
+}
+.container3{
+  animation: GetIn 5s ease 15s forwards;
+  top: -20000px;
+  position: relative;
+  width: 300px;
+}
+.netcont{
+  position: relative;
+  height: 440px;
+  width: 300px;
+} 
+.netcont .ring1, .netcont .ring4 {
+  margin: auto;
+  animation: animate 4s linear infinite alternate;
+}
+.netcont > section{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: animate 4s linear infinite normal;
+  border-radius: 50%;
+}
+.netcont > section::before{
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #fff;
+}
+.netcont .ring1{
+  top: 50px;
+  border: 4px solid red;
+}
+.netcont .ring1::before {
+  box-shadow: 0 0 0 5px #990f0f,
+  0 0 0 10px  #b43737;
+}   
+.netcont .ring2{
+  top: 165px;
+  left: 182px;
+  border: 4px solid #013220;
+}
+.netcont .ring2::before {
+  box-shadow: 0 0 0 5px #013220,
+  0 0 0 10px #013220;
+}   
+.netcont .ring3{
+  top: 165px;
+  right: 182px;
+  border: 4px solid #fce303;
+}
+.netcont .ring3::before {
+  box-shadow: 0 0 0 5px #fce303,
+  0 0 0 10px #fce303; 
+}
+.netcont .ring4{
+  bottom: 50px;
+  border: 4px solid #19ad09;
+}
+.netcont .ring4::before {
+  box-shadow: 0 0 0 5px #19ad09,
+  0 0 0 10px #19ad09;
+}
+  .ringImg{
+    position: absolute;
+  }
+  #forMtn{
+    top: 195px;
+    left: 50px;
+  }
+  #forAirtel{
+    top: 80px;
+  }
+  #forGlo{
+    bottom: 80px;
+  }
+  #for9mobile{
+    top: 195px;
+    right: 50px;
+  }
+  @keyframes GetOut{
+    0%{
+      opacity: 0.8;
     }
+    30%{
+      opacity: 0.6;
+      top: -50px;
+    }
+    60%{
+      opacity: 0.4;
+      top: -100px;
+    }
+    80%{
+      opacity: 0.2;
+      top: -200px;
+    }
+    100%{
+      opacity: 0;
+      top: -200000px;
+    }
+  }
+@keyframes GetIn{
+    0%{
+      top: -90000px;
+    }
+    30%{
+      top: -250px;
+    }
+    60%{
+      top: 100px;
+    }
+    100%{
+      top: 0;
+    }
+  }
+ @keyframes animate{
+  0%
+  {
+      transform: rotate(0deg);
+  }
+  100%
+  {
+      transform: rotate(360deg);
+  }
+}
