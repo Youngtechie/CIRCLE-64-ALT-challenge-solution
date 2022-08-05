@@ -26,8 +26,6 @@ function startApp() {
 
   let second_enter = document.querySelector(".second_enter");
 
-  let maquee_ranger = document.querySelector(".marquee_ranger");
-
   let ringShow = document.querySelector(".ringShow");
 
   let internalStyle = document.head.appendChild(document.createElement("style"));
@@ -119,7 +117,6 @@ function startApp() {
     container2.style.top = "0px";
     first_enter.innerHTML = "That's great right? Thanks for checking."
     second_enter.innerHTML = "Goodbye!";
-    maquee_ranger.style.top = "-20px";
     container2.style.animation = "none";
     container2.style.position = "relative";
     split_right.style.display = "none";
@@ -136,7 +133,7 @@ function startApp() {
     if (window.matchMedia("(max-width: 949px)").matches) {
       split_right.style.display = "block";
       split_left.style.display = "none";
-          
+
     }
     else if (window.matchMedia("(min-width: 950px)").matches) {
       split_right.style.display = "block";

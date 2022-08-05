@@ -98,9 +98,6 @@ p{
   animation: colourful 5s ease 0s infinite normal;
   margin-top: 10px;
 }
-marquee{
-  margin: 5px 0;
-}
 @keyframes bounce-in{
   0%  {color:red; left: -50px; top:-100px;} 
   25%  {color:#fff; left:-40px; top:0px;}
@@ -146,9 +143,6 @@ marquee{
   .right{
     display: none;
   }
-  .marquee_ranger{
-		top: -20px;
-	}
   .container2{
 		margin-left: 0px;
 	}
@@ -190,9 +184,6 @@ marquee{
   }
  .btn_next{
 		display: none;
-	}
-  .marquee_ranger{
-		top: -20px;
 	}
 .ringShow{
   width: 150px;
@@ -346,12 +337,6 @@ marquee{
 		position: relative;
 		animation: enter 6s ease 6s 1 forwards;
 		top: -1000px;
-	}
-	.marquee_ranger{
-		z-index: 6;
-		position: relative;
-		width: 70%;
-    color: black;
 	}
 	.btn_next{
 		z-index: 6;
