@@ -143,6 +143,8 @@ function startApp() {
 
   btnElement.addEventListener("click", () => {
     spanElement.innerHTML = "";
+    ringShow.style.border = "4px solid white";
+    internalStyle.innerHTML = ".ringShow::before {box-shadow: 0 0 0 5px blue;}";
   })
 };
 
